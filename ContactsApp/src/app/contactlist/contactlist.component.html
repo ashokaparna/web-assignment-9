@@ -1,3 +1,10 @@
-<p>
-  contactlist works!
-</p>
+<!--list of contacts in the directory-->
+<div class="contact-list">
+  <ul class="contacts">
+    <li *ngFor="let contact of contacts">
+      <span class="badge">{{contact.id}}</span> {{contact.firstname}}
+    </li>
+  </ul>
+</div>
+
+

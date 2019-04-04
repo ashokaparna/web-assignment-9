@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactlistComponent } from './contactlist/contactlist.component';
+import {ContactsServices} from "./services/contacts.services";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ContactlistComponent } from './contactlist/contactlist.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ContactsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
