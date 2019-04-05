@@ -1,0 +1,41 @@
+@import "../../styles.scss";
+/*
+For the following the table related style elements
+we have border radius set for styling, overflow is set
+so that the filling color would not overflow.
+tr, td all have their own separate settings to achieve the desired
+effect on UI
+*/
+
+table.contacts_table{
+  width: 100%;
+  border: 1px solid $contact-theme;
+  border-radius: 13px;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+table.contacts_table td {
+  border-bottom: 1px solid $contact-theme;
+  padding: 10px;
+  height: 45px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 25px;
+  overflow: hidden;
+}
+table.contacts_table tr:last-child > td {
+  border-bottom: none;
+  overflow: hidden;
+}
+table.contacts_table tr:first-child > td {
+  border-top: none;
+  overflow: hidden;
+}
+
+table.contacts_table tr:hover {
+  background: #6495ED !important;
+  overflow: hidden;
+  cursor: pointer;
+}

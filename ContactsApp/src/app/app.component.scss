@@ -1,0 +1,30 @@
+
+
+.cell1inside{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.contact-list{
+  position: absolute;
+  width: 700px;
+}
+
+
+
+/*Styling for the div that is responsible for showing the contact card
+when you click on a name in the LH side of the UI*/
+.contact-details{
+  float: right;
+  width: 600px;
+  font-size: 25px;
+  border-radius: 5px;
+  margin-right: 55px;
+  margin-top: 200px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+

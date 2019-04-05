@@ -1,5 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<app-contactlist [contactList]="contacts"></app-contactlist>
-
-<router-outlet></router-outlet>
+<!--Container div for the whole page-->
+<div class = "container">
+  <!--Add contact holder for heading section-->
+  <app-navbar></app-navbar>
+  <!--Contact view div to display add contact fields-->
+  <app-addcontact></app-addcontact>
+  <!--list of contacts in the directory-->
+  <app-contactlist [contactList]="contacts"></app-contactlist>
+  <div class="contact-details">
+  </div>
+</div>
+<!--<router-outlet></router-outlet>-->

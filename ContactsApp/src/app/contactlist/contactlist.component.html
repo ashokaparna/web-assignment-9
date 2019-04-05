@@ -1,10 +1,18 @@
 <!--list of contacts in the directory-->
-<div class="contact-list">
-  <ul class="contacts">
-    <li *ngFor="let contact of contactList">
-      <span class="badge">{{contact.id}}</span> {{contact.firstname}}
-    </li>
-  </ul>
+<div class = "container">
+  <div></div>
+  <div class="contact-list">
+    <table class="contacts_table">
+      <tbody>
+        <tr *ngFor="let contact of contactList">
+          <td (click)="fetchContactById(contact.id)">
+            {{contact.firstname + " " + contact.lastname}}
+          </td>
+        </tr>
+    </table>
+  </div>
+  <br />
 </div>
+
 
 

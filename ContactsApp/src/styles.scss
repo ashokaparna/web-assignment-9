@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/*place-image is used to load an image in a component. Parameter is filename: name of the image file*/
+@mixin place-image($filename) {
+  background-image: url($image-base-path + $filename);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/*Variables that are used in different scss classes */
+$image-base-path: '/assets/images/';
+/*this is the color used by all components in this web app
+the color is cornflower blue*/
+$contact-theme: #6495ED;
