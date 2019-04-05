@@ -10,13 +10,24 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent {
   title = 'ContactsApp';
+  isContactFormVisible = false;
 
   contacts: Array<Contact>;
 
-  constructor(contactService: ContactsServices) {
-    const contactLists$: Observable<Array<Contact>> = contactService.getContactList();
+  constructor(private contactService: ContactsServices) {
+    this.getAllContacts();
+  }
+  toggleAddContactForm() {
+    this.isContactFormVisible = !this.isContactFormVisible;
+  }
+  getAllContacts() {
+    const contactLists$: Observable<Array<Contact>> = this.contactService.getContactList();
     contactLists$.subscribe(contacts => {
       this.contacts = contacts;
     });
+  }
+  updateList(){
+    this.toggleAddContactForm();
+    this.getAllContacts();
   }
 }

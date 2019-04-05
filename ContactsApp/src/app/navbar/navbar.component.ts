@@ -6,15 +6,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Output() open: EventEmitter<any> = new EventEmitter();
+  @Output() showContactForm = new EventEmitter();
 
   constructor() { }
 
   showAddContactForm() {
-    this.open.emit(null);
+    this.showContactForm.emit(null);
   }
 
   ngOnInit() {
   }
-
 }

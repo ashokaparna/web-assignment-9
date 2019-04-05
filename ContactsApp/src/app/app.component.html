@@ -2,9 +2,9 @@
 <!--Container div for the whole page-->
 <div class = "container">
   <!--Add contact holder for heading section-->
-  <app-navbar></app-navbar>
+  <app-navbar (showContactForm)='toggleAddContactForm($event)'></app-navbar>
   <!--Contact view div to display add contact fields-->
-  <app-addcontact></app-addcontact>
+  <app-addcontact *ngIf="isContactFormVisible" (listUpdated)="updateList()"></app-addcontact>
   <!--list of contacts in the directory-->
   <app-contactlist [contactList]="contacts"></app-contactlist>
   <div class="contact-details">

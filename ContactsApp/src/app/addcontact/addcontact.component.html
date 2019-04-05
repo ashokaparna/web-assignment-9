@@ -3,26 +3,31 @@
   <span class="warning-span"></span>
   <div class = "firstname-div">
     <font size="5">First Name:</font>
-    <input class="firstname" type="text">
+    <input class="firstname" type="text" [(ngModel)]="firstName">
+    <label *ngIf="!isFirstNameValid">First name is required</label>
   </div>
   <br>
   <div class = "lastname-div">
     <font size="5">Last Name:</font>
-    <input class="lastname" type="text">
+    <input class="lastname" type="text" [(ngModel)]="lastName">
+    <label *ngIf="!isLastNameValid">Last name is required</label>
   </div>
   <br>
   <div class = "contactnum-div">
     <font size="5">Phone Number:</font>
-    <input class="phone-number" type="number">
+    <input class="phone-number" type="number" [(ngModel)]="phoneNumber">
+    <label *ngIf="!isPhoneNumberEmpty">Phone number is required</label>
+    <label *ngIf="!isPhoneNumberValid">10 digits</label>
   </div>
   <br>
   <div class = "email-div">
     <font size="5">Email:</font>
-    <input class="email" type="text">
+    <input class="email" type="text" [(ngModel)]="email">
+    <label *ngIf="!isEmailIdValid">Enter correct format</label>
   </div>
   <br />
   <div class = "submit-button-div">
-    <button class="submit-button"> Submit </button>
+    <button class="submit-button" (click)="submitClick()"> Submit </button>
   </div>
   <br><br>
 </div>
