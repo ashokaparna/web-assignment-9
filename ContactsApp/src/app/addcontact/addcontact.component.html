@@ -3,26 +3,34 @@
   <span class="warning-span"></span>
   <div class = "firstname-div">
     <font size="5">First Name:</font>
+    <!--Input field for first name binding to variable firstName-->
     <input class="firstname" type="text" [(ngModel)]="firstName">
+    <!--Label for showing error in first name field-->
     <label *ngIf="!isFirstNameValid">First name cannot be empty</label>
   </div>
   <br>
   <div class = "lastname-div">
     <font size="5">Last Name:</font>
+    <!--Input field for last name binding to variable lastName-->
     <input class="lastname" type="text" [(ngModel)]="lastName">
+    <!--Label for showing error in last name field-->
     <label *ngIf="!isLastNameValid">Last name cannot be empty</label>
   </div>
   <br>
   <div class = "contactnum-div">
     <font size="5">Phone Number:</font>
+    <!--Input field for phone number binding to variable phoneNumber-->
     <input class="phone-number" [(ngModel)]="phoneNumber">
+    <!--Label for showing error in phone number field-->
     <label *ngIf="!isPhoneNumberEmpty">Phone number cannot be empty</label>
     <label *ngIf="!isPhoneNumberValid">Phone number should be 10 digits longs</label>
   </div>
   <br>
   <div class = "email-div">
     <font size="5">Email:</font>
+    <!--Input field for email binding to variable email-->
     <input class="email" type="text" [(ngModel)]="email">
+    <!--Label for showing error in phone number field-->
     <label *ngIf="!isEmailIdValid">Wrong email id format</label>
   </div>
   <br />

@@ -1,3 +1,4 @@
+/*Model for contact */
 export class Contact {
   _id: string;
   firstname: string;

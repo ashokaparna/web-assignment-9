@@ -41,6 +41,7 @@ export class AppComponent {
     if (this.isContactDetailFormVisible === false) {
       this.isContactDetailFormVisible = true;
     }
+    window.scrollTo(0, 0);
     this.contact = contact;
   }
   closeDetailView() {

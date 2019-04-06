@@ -9,7 +9,9 @@ import {ContactsServices} from '.././services/contacts.services';
   styleUrls: ['./contactlist.component.scss']
 })
 export class ContactlistComponent implements OnInit {
+  /*Contact list array*/
   @Input() contactList: Array<Contact>;
+  /*Contactdetail emitter to show details of a contact detail*/
   @Output() showContactDetail = new EventEmitter();
   contactService: ContactsServices;
   constructor(contactService: ContactsServices) {
