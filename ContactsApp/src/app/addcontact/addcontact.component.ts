@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {ContactsServices} from '../services/contacts.services';
-import {Contact} from "../models/contact";
+import {Contact} from '../models/contact';
 
 @Component({
   selector: 'app-addcontact',
@@ -8,7 +8,6 @@ import {Contact} from "../models/contact";
   styleUrls: ['./addcontact.component.scss']
 })
 export class AddcontactComponent implements OnInit {
-  //contactService: ContactsServices;
   @Output() listUpdated = new EventEmitter();
   firstName: string;
   lastName: string;
@@ -19,10 +18,10 @@ export class AddcontactComponent implements OnInit {
   isPhoneNumberEmpty = true;
   isPhoneNumberValid = true;
   isEmailIdValid = true;
-  phonenoRegex = new RegExp('^\d{10}$') ;
-  emailRegex = new RegExp('^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$');
+  phonenoRegex = new RegExp('^[0-9]\\d{9}$');
+  emailRegex = new RegExp('^\\w+([\.-]?\\w+)*@\\w+([\.-]?\\w+)+(\.\\w{2,3})+$');
   constructor(private contactService: ContactsServices) {
-   // this.contactService = contactService;
+
   }
 
   ngOnInit() {
@@ -51,14 +50,14 @@ export class AddcontactComponent implements OnInit {
       this.isPhoneNumberEmpty = false;
       return false;
     }
-    // if (!this.phonenoRegex.test(this.phoneNumber)) {
-    //   this.isPhoneNumberValid = false;
-    //   return false;
-    // }
-    // if (!this.emailRegex.test(this.email)) {
-    //   this.isEmailIdValid = false;
-    //   return false;
-    // }
+    if (!this.phonenoRegex.test(this.phoneNumber)) {
+      this.isPhoneNumberValid = false;
+      return false;
+    }
+    if (!this.emailRegex.test(this.email)) {
+      this.isEmailIdValid = false;
+      return false;
+    }
     return true;
   }
 }
