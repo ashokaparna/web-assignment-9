@@ -43,7 +43,7 @@ export class AppComponent {
     }
     this.contact = contact;
   }
-  closeDetailView(){
+  closeDetailView() {
     this.isContactDetailFormVisible = false;
   }
 
