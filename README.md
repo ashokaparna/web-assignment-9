@@ -1,21 +1,45 @@
-# ASSIGNMENT 1
-* HTML form for Form 1040 U.S. Individual Income Tax Return
+# ASSIGNMENT 9
+* Contacts app in angular to display all contacts of a person
 
 ## Project Description:
-*Implement html form for FORM 1040 with necessary html validations. Styling is not necessary. Two separate html pages are created for page 1 and 2.
+* Display all the contacts of a person using Rest API. User should be able to add contact and view contact details on clicking a contact. 
 
 ## Requirement
 * IntelliJ Idea or Visual Studio Code and a web browser.
+* Node package manager 
 
-## How to run:
-* Steps:
-1. open a git bash shell
-2. Execute command git clone https://github.com/neu-mis-info6150-spring-2019/assignment-1-ashokaparna.git"
-3. Open files with IntelliJ Idea or Visal studio code in a new workspace
-4. Go to the project folder. Right click on TaxForm.html or TaxForm2.html and select Open With and then select a web browser.
-TaxForm2.html is continuation of TaxForm
+## Development server
 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ 
 ## References:
 * www.w3schools.com
 * developer.mozilla.org
 * stackoverflow.com
+* angular.io
+
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
