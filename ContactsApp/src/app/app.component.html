@@ -6,8 +6,13 @@
   <!--Contact view div to display add contact fields-->
   <app-addcontact *ngIf="isContactFormVisible" (listUpdated)="updateList()"></app-addcontact>
   <!--list of contacts in the directory-->
-  <app-contactlist [contactList]="contacts"></app-contactlist>
-  <div class="contact-details">
+  <div class="contact-list">
+  <app-contactlist [contactList]="contacts" (showContactDetail)="getContactDetail($event)"></app-contactlist>
+  </div>
+
+  <div class="contact-details" *ngIf="isContactDetailFormVisible">
+    <span class="single-contact-detail">Name:&nbsp;{{contact.firstname}}&nbsp;{{contact.lastname}}<br />Phone Number:&nbsp;{{contact.phonenumber}}<br />Email:&nbsp;{{contact.email}}</span>
+    <button (click)="closeDetailView()">Close</button>
   </div>
 </div>
 <!--<router-outlet></router-outlet>-->

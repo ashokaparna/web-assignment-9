@@ -43,7 +43,7 @@ export class ContactsServices{
    * @return {Observable<Contact>} {Observable for contact object}
    */
   getContactDetails(id: string): Observable<Contact> {
-    return this.http.get<Contact>(this.contactResourceURL + id);
+    return this.http.get<Contact>(this.contactResourceURL + '/' + id);
   }
 }
 

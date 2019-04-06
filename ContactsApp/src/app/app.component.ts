@@ -10,10 +10,10 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent {
   title = 'ContactsApp';
+  contact: Contact;
   isContactFormVisible = false;
-
   contacts: Array<Contact>;
-
+  isContactDetailFormVisible = false;
   constructor(private contactService: ContactsServices) {
     this.getAllContacts();
   }
@@ -26,8 +26,25 @@ export class AppComponent {
       this.contacts = contacts;
     });
   }
-  updateList(){
+  updateList() {
     this.toggleAddContactForm();
     this.getAllContacts();
   }
+  getContactDetail(id) {
+    this.contactService.getContactDetails(id)
+      .subscribe(contact => {
+          this.showContactDetailsView(contact);
+      });
+  }
+  showContactDetailsView(contact) {
+    this.isContactFormVisible = false;
+    if (this.isContactDetailFormVisible === false) {
+      this.isContactDetailFormVisible = true;
+    }
+    this.contact = contact;
+  }
+  closeDetailView(){
+    this.isContactDetailFormVisible = false;
+  }
+
 }

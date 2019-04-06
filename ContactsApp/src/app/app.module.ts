@@ -8,7 +8,7 @@ import { ContactlistComponent } from './contactlist/contactlist.component';
 import {ContactsServices} from './services/contacts.services';
 import { AddcontactComponent } from './addcontact/addcontact.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [

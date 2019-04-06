@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Contact } from '.././models/contact';
 
 import {ContactsServices} from '.././services/contacts.services';
@@ -10,11 +10,13 @@ import {ContactsServices} from '.././services/contacts.services';
 })
 export class ContactlistComponent implements OnInit {
   @Input() contactList: Array<Contact>;
+  @Output() showContactDetail = new EventEmitter();
   contactService: ContactsServices;
   constructor(contactService: ContactsServices) {
     this.contactService = contactService;
   }
-  fetchContactById(id){
+  fetchContactById(id) {
+    this.showContactDetail.emit(id);
   }
 
   ngOnInit() {
