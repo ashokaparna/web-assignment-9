@@ -1,4 +1,4 @@
-# ASSIGNMENT 9
+# ContactsApp
 * Contacts app in angular to display all contacts of a person
 
 ## Project Description:
